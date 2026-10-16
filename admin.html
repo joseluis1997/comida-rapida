@@ -1,0 +1,17 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
+<title>Administración · Caraparí</title><link rel="stylesheet" href="css/style.css"></head><body>
+<section id="login" class="login"><h2 style="margin-top:0">🔐 Panel de administración</h2>
+<form id="lf"><label class="f"><span>Correo</span><input type="email" id="em" required autocomplete="username"></label>
+<label class="f"><span>Contraseña</span><input type="password" id="pw" required minlength="6" autocomplete="current-password"></label>
+<button class="btn" style="width:100%">Ingresar</button></form><p class="mu"><a href="index.html">← Volver al sitio</a></p></section>
+<section id="app" class="hide"><div class="bar"><strong>🍔 Administración · Caraparí</strong>
+<span><a href="index.html">Ver sitio</a> <button class="btn g s" id="out">Salir</button></span></div>
+<div class="wrap"><div class="tabs" id="tabs"><button data-t="restaurantes" class="on">Restaurantes</button><button data-t="comidas">Comidas y precios</button><button data-t="categorias">Categorías</button></div>
+<button class="btn" id="new" style="margin-bottom:.8rem">+ Nuevo</button><div class="tw"><table><thead id="th"></thead><tbody id="tb"></tbody></table></div></div></section>
+<dialog id="dlg"><form id="form"><div class="dh"><h3 id="ft" style="margin:0"></h3><button type="button" class="btn g s" onclick="dlg.close()">✕</button></div>
+<div class="db" id="fields"></div><div class="dh" style="border:0;border-top:1px solid var(--bd);justify-content:flex-end;gap:.5rem">
+<button type="button" class="btn g" onclick="dlg.close()">Cancelar</button><button class="btn" id="save">Guardar</button></div></form></dialog>
+<div id="toast"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script src="js/config.js"></script><script src="js/admin.js"></script></body></html>
