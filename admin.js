@@ -1,4 +1,8 @@
-const sb=supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY);
+//const sb=supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY);
+const sb = window.supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_ANON_KEY
+);
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const toast=(m,e)=>{const t=$('#toast');t.textContent=m;t.className='show'+(e?' err':'');setTimeout(()=>t.className='',3500)};
